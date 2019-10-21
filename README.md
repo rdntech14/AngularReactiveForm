@@ -15,10 +15,16 @@ Steps:
 2) Create object/instance of model using FromControl and FormGroup in component class
 ```
   registrationFrom = new FormGroup({
-    userName: new FormControl(''),
+    username: new FormControl(''),
     password: new FormControl(''),
-    confirmPassword: new FormControl('')
-  }); 
+    confirmpassword: new FormControl(''),
+    address: new FormGroup({
+      city: new FormControl(''),
+      state: new FormControl(''),
+      postalCode: new FormControl('')
+    })
+  });
+  
 ```  
 3) Update template with 'formGroup' and 'formControlName' with instance variable name created in component
 ```
